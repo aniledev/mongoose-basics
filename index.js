@@ -16,3 +16,20 @@ mongoose
 //   // we're connected!
 //   console.log("Connection open!");
 // });
+
+// CREATE A SCHEMA
+const movieSchema = new mongoose.Schema({
+  title: String,
+  year: Number,
+  score: Number,
+  rating: String,
+});
+
+/* 
+CREATE A MODEL CLASS
+1. model name is always singular
+2. Mongo pluralizes it and creates a collection as weill when the model is created
+3. creates a class
+4. new instances of the model class can be created and saved to the database 
+*/
+const Movie = mongoose.model("Movie", movieSchema);
