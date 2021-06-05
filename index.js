@@ -40,12 +40,16 @@ const amadeus = new Movie({
   rating: "R",
 });
 
-// amadeus.save() is what transfers the javascript object to the databse
+// amadeus.save() is what transfers the the single instance javascript object to the database
 
+// insertMany() does not require save; this method returns a promise
 Movie.insertMany([
   { title: "Amelie", year: 2001, score: 8.3, rating: "R" },
   { title: "Alien", year: 1979, score: 8.1, rating: "R" },
   { title: "The Iron Giant", year: 1999, score: 7.5, rating: "PG" },
   { title: "Stand By Me", year: 1986, score: 8.6, rating: "R" },
   { title: "Moonrise Kingdom", year: 2012, score: 7.3, rating: "PG-13" },
-]);
+]).then((data) => {
+  console.log("It worked!");
+  console.log(data);
+});
