@@ -33,12 +33,12 @@ CREATE A MODEL CLASS
 4. new instances of the model class can be created and saved to the database 
 */
 const Movie = mongoose.model("Movie", movieSchema);
-const amadeus = new Movie({
-  title: "Amadeus",
-  year: 1986,
-  score: 9.2,
-  rating: "R",
-});
+// const amadeus = new Movie({
+//   title: "Amadeus",
+//   year: 1986,
+//   score: 9.2,
+//   rating: "R",
+// });
 
 // amadeus.save() is what transfers the the single instance javascript object to the database
 
