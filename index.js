@@ -50,6 +50,37 @@ Movie.insertMany([
   { title: "Stand By Me", year: 1986, score: 8.6, rating: "R" },
   { title: "Moonrise Kingdom", year: 2012, score: 7.3, rating: "PG-13" },
 ]).then((data) => {
-  console.log("It worked!");
+  console.log("INSERT MANY!");
+  console.log(data);
+});
+
+/*
+Movie.find({}).then((data) => {
+  console.log("FIND FIRST");
+  console.log(data);
+});
+*/
+
+/*
+Movie.find({ rating: "PG-13" }).then((data) => {
+  console.log("FIND RATING");
+  console.log(data);
+});
+*/
+
+/*
+Movie.find({ year: { $gte: 2010 } }).then((data) => {
+  console.log("FIND YEAR GTE");
+  console.log(data);
+});
+*/
+
+// Movie.find({ year: { $lte: 2010 } }).then((data) => {
+//   console.log("FIND YEAR LTE!");
+//   console.log(data);
+// });
+
+Movie.findById("60cd983e57cb24ff14954365").then((data) => {
+  console.log("FIND BY ID!");
   console.log(data);
 });
