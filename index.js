@@ -84,3 +84,13 @@ Movie.findById("60cd983e57cb24ff14954365").then((data) => {
   console.log("FIND BY ID!");
   console.log(data);
 });
+
+Movie.updateOne({ title: "Amadeus" }, { year: 1984 }).then((res) => {
+  console.log("UPDATE ONE BY QUERY");
+  console.log(res);
+});
+
+Movie.updateMany({ title: "Amadeus" }, { year: 1984 }).then((res) => {
+  console.log("UPDATE ONE BY QUERY");
+  console.log(res);
+});
