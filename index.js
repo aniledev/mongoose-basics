@@ -96,3 +96,17 @@ Movie.updateMany({ title: "Amadeus" }, { year: 1984 }).then((res) => {
   console.log("UPDATE ONE BY QUERY");
   console.log(res);
 });
+
+/*
+Movie.deleteOne({ title: "The Iron Giant" }).then((res) => {
+  console.log("DELETE ONE BY QUERY");
+  console.log(res);
+});
+*/
+
+/*
+Movie.deleteMany({ year: { $lte: 1999 } }).then((res) => {
+  console.log("DELETE MANY BY QUERY");
+  console.log(res);
+});
+*/
