@@ -75,10 +75,12 @@ Movie.find({ year: { $gte: 2010 } }).then((data) => {
 });
 */
 
-// Movie.find({ year: { $lte: 2010 } }).then((data) => {
-//   console.log("FIND YEAR LTE!");
-//   console.log(data);
-// });
+/*
+Movie.find({ year: { $lte: 2010 } }).then((data) => {
+  console.log("FIND YEAR LTE!");
+  console.log(data);
+});
+*/
 
 Movie.findById("60cd983e57cb24ff14954365").then((data) => {
   console.log("FIND BY ID!");
